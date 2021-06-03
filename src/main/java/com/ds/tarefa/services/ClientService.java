@@ -2,6 +2,7 @@ package com.ds.tarefa.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import javax.persistence.EntityNotFoundException;
@@ -47,16 +48,11 @@ public class ClientService {
 	
 	@Transactional(readOnly = true)
 	public ClientDTO findById(Long id) {		
-		try {
-			System.out.println("MAs bahhh 11");
-			Client cli = null;
-			cli = repo.getById(id);
-			return new ClientDTO(cli);
-		}
-		catch(javax.persistence.EntityNotFoundException enf) {
-			System.out.println("MAs bahhh");
-			throw new ResourceNotFoundException("Cliente não localizado com o id "+id);
-		}		
+		Optional<Client> cliOpt = repo.findById(id);
+		
+		return new ClientDTO(
+				cliOpt.orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado para o id " + id)));	
+	
 	}
 	
 	
@@ -73,7 +69,7 @@ public class ClientService {
 	@Transactional
 	public ClientDTO update(Long id, ClientDTO dto) {
 		try {
-			Client cli = repo.getById(id);
+			Client cli = repo.getOne(id);
 			//dtoToEntity(dto, cli);
 			cli.setDTO(dto);
 			cli = repo.save(cli);
