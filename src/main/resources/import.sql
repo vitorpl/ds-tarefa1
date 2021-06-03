@@ -1,0 +1,10 @@
+insert into client (name, cpf, income, birth_date, children) values ('Adatolilde dos Santos', '93292812062', 3200.00, '1977-04-20', 2);
+insert into client (name, cpf, income, birth_date, children) values ('Zuleika da Silva', '09051943067', 4200.00, '1980-10-20', 1);
+insert into client (name, cpf, income, birth_date, children) values ('Fulano dos Reis', '02939930090', 2100.00, '1983-11-20', 1);
+insert into client (name, cpf, income, birth_date, children) values ('Ciclano Silveira', '15413244045', 5200.00, '1975-09-21', 3);
+insert into client (name, cpf, income, birth_date, children) values ('Beltrano Brasil', '20743339002', 5000.00, '1984-06-15', 2);
+insert into client (name, cpf, income, birth_date, children) values ('Jucicléia Aparecida dos Santos', '65769324058', 6200.00, '1976-12-05', 5);
+insert into client (name, cpf, income, birth_date, children) values ('Benedito Vieira', '19299253013', 2800.00, '1992-11-20', 3);
+insert into client (name, cpf, income, birth_date, children) values ('Macleto Beneditino', '48841568038', 3900.00, '1990-10-20', 3);
+insert into client (name, cpf, income, birth_date, children) values ('Zeferino Aparecido', '03025671009', 3210.00, '1988-09-20', 1);
+insert into client (name, cpf, income, birth_date, children) values ('Klemildo dos Santos', '54478677034', 4221.00, '1985-08-31', 0);
